@@ -21,7 +21,7 @@ export async function updateUsuarioDB(id, usuarioData) {
 
 export async function deleteUsuarioDB(id) {
   const [result] = await dbconn.query(
-    "UPDATE usuarios SET estado = 3 WHERE id = ?",
+    "UPDATE usuarios SET estado = 3 WHERE id_usuario = ?",
     [id]
   );
   return result;
