@@ -65,7 +65,7 @@ export async function updateUsuario(req, res) {
     const { id } = req.params;
     const usuarioData = {
       user_name: req.body.user_name,
-      monitor_scompute: req.body.monitor_scompute
+      nombre_completo: req.body.nombre_completo
     };
 
     // Solo actualiza la contraseña si se proporciona
@@ -80,7 +80,7 @@ export async function updateUsuario(req, res) {
       data: {
         id,
         user_name: usuarioData.user_name,
-        monitor_scompute: usuarioData.monitor_scompute
+        nombre_completo: usuarioData.nombre_completo
       },
     });
   } catch (error) {
