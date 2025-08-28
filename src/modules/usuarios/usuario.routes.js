@@ -16,7 +16,7 @@ import { authMiddleware } from "../../utils/administrarToken.js";
 router.get("/listartodos", authMiddleware, getAllUsuarios);
 router.post("/crear", createUsuario);
 router.put("/actualizar/:id", updateUsuario);
-router.put("/eliminar/:id", deleteUsuario);
+router.delete("/eliminar/:id", deleteUsuario);
 router.post("/login", loginUsuario);
 
 export default router;
