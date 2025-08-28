@@ -12,7 +12,7 @@ export async function createUsuarioDB(usuarioData) {
 }
 
 export async function updateUsuarioDB(id, usuarioData) {
-  const [result] = await dbconn.query("UPDATE usuarios SET ? WHERE id = ?", [
+  const [result] = await dbconn.query("UPDATE usuarios SET ? WHERE id_usuario = ?", [
     usuarioData,
     id,
   ]);
